@@ -1,1 +1,14 @@
-This file was created by IntelliJ IDEA 10.5.4 for binding GitHub repository
+To reproduce this error
+
+Install JRuby 1.6.6 or 1.6.5 (have not tested with other versions)
+
+  mvn install
+
+It should run the JUnit test successfully.
+However, doing the same thing from JRuby fails
+
+  $ ruby jrubytest.rb
+  Calling DateTime success
+  NativeException: java.lang.NoSuchMethodError: org.joda.time.DateTime.<init>(IIIIII)V
+    (root) at jrubytest.rb:11
+
